@@ -1,4 +1,8 @@
 <template>
+  <MetaInfo
+    title="Dev Tools - Useful Online Tools Collection"
+    description="Discover a collection of useful online tools for web development, productivity, and more."
+  />
   <div class="min-h-screen bg-gray-50 py-8 px-4">
     <div class="max-w-4xl mx-auto">
       <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
