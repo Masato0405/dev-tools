@@ -1,6 +1,10 @@
 <template>
   <div>
+    <Header />
     <NuxtRouteAnnouncer />
-    <RouterView /> 
+    <NuxtPage />
   </div>
 </template>
+
+<script setup>
+</script>

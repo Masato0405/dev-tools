@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen bg-gray-50 py-8 px-4">
       <div class="max-w-2xl mx-auto bg-white rounded-lg shadow p-6">
-        <h1 class="text-2xl font-bold mb-6 text-gray-800">Text Counter</h1>
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">文字数カウンター</h1>
         
         <div class="space-y-4">
           <div>
@@ -20,12 +20,12 @@
               class="rounded text-blue-600"
             >
             <label for="includeWhitespace" class="text-gray-700">
-              Include spaces and line breaks
+              空白と改行を含める
             </label>
           </div>
   
           <div class="text-lg font-medium text-gray-700">
-            Character count: {{ characterCount }}
+            文字数: {{ characterCount }}
           </div>
   
           <div class="flex space-x-4">
@@ -33,14 +33,14 @@
               @click="copyToClipboard"
               class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Copy to Clipboard
+              コピーする
             </button>
             
             <button
               @click="resetText"
               class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
             >
-              Reset
+              入力欄をリセット
             </button>
           </div>
         </div>
@@ -72,10 +72,8 @@
   const copyToClipboard = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(text.value)
-      alert('Text copied to clipboard!')
     } catch (err) {
       console.error('Copy failed:', err)
-      alert('Failed to copy text to clipboard')
     }
   }
   
