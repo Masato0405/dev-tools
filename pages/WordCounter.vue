@@ -24,7 +24,7 @@
         <div class="flex space-x-4">
           <button @click="copyToClipboard" :disabled="isCopying"
             class="px-4 py-2 rounded-lg text-white transition-all disabled:opacity-75 disabled:cursor-not-allowed"
-            :class="isCopying ? 'bg-green-500 scale-95' : 'bg-teal-600 hover:bg-teal-700'">
+            :class="isCopying ? 'bg-teal-600 scale-95' : 'bg-green-500 hover:bg-teal-700'">
             {{ copyButtonText }}
           </button>
 
