@@ -78,7 +78,7 @@
               v-if="result"
               @click="copyResult"
               :disabled="isCopyingResult"
-              class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-75"
+              class="px-4 py-2 text-sm bg-green-500 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-75"
             >
               {{ copyResultButtonText }}
             </button>
