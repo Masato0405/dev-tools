@@ -1,6 +1,6 @@
 <template>
   <header class="bg-vueGreen text-white shadow-md py-4 px-8 flex justify-between items-center">
-    <div class="text-2xl font-semibold">Dev Tools</div>
+    <div class="text-2xl font-semibold"><a href="/" class="hover:text-vueDarkGreen">Dev Tools</a></div>
     <nav>
       <ul class="flex space-x-6">
         <li><a href="/WordCounter" class="hover:text-vueDarkGreen">Word Counter</a></li>
