@@ -5,7 +5,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   if (GA_ID) {
     nuxtApp.vueApp.use(VueGtag, {
         property: {
-          id: "GA_MEASUREMENT_ID",
+          id: GA_ID,
         },
       });
       trackRouter(useRouter());
