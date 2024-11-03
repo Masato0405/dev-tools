@@ -30,11 +30,13 @@
   
           <div class="flex space-x-4">
             <button
-              @click="copyToClipboard"
-              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              コピーする
-            </button>
+            @click="copyToClipboard"
+            :disabled="isCopying"
+            class="px-4 py-2 rounded-lg text-white transition-all disabled:opacity-75 disabled:cursor-not-allowed"
+            :class="isCopying ? 'bg-green-500 scale-95' : 'bg-teal-600 hover:bg-teal-700'"
+          >
+            {{ copyButtonText }}
+          </button>
             
             <button
               @click="resetText"
@@ -61,6 +63,9 @@
   
   const text = toRef(state, 'text')
   const includeWhitespace = toRef(state, 'includeWhitespace')
+  const isCopying = ref(false)
+  const copyButtonText = computed(() => isCopying.value ? 'Copied!' : 'コピーする')
+
   
   const characterCount = computed<number>(() => {
     if (includeWhitespace.value) {
@@ -70,12 +75,16 @@
   })
   
   const copyToClipboard = async (): Promise<void> => {
-    try {
-      await navigator.clipboard.writeText(text.value)
-    } catch (err) {
-      console.error('Copy failed:', err)
-    }
+  try {
+    await navigator.clipboard.writeText(text.value)
+    isCopying.value = true
+    setTimeout(() => {
+      isCopying.value = false
+    }, 1000)
+  } catch (err) {
+    console.error('Copy failed:', err)
   }
+}
   
   const resetText = (): void => {
     text.value = ''
