@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen bg-gray-50 py-8 px-4">
       <div class="max-w-2xl mx-auto bg-white rounded-lg shadow p-6">
-        <h1 class="text-2xl font-bold mb-6 text-gray-800">文字数カウンター</h1>
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Word Counter</h1>
         
         <div class="space-y-4">
           <div>
@@ -20,12 +20,12 @@
               class="rounded text-blue-600"
             >
             <label for="includeWhitespace" class="text-gray-700">
-              空白と改行を含める
+              Include spaces and line breaks
             </label>
           </div>
   
           <div class="text-lg font-medium text-gray-700">
-            文字数: {{ characterCount }}
+            Character count: {{ characterCount }}
           </div>
   
           <div class="flex space-x-4">
@@ -42,7 +42,7 @@
               @click="resetText"
               class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
             >
-              入力欄をリセット
+              Reset
             </button>
           </div>
         </div>
@@ -64,7 +64,7 @@
   const text = toRef(state, 'text')
   const includeWhitespace = toRef(state, 'includeWhitespace')
   const isCopying = ref(false)
-  const copyButtonText = computed(() => isCopying.value ? 'Copied!' : 'コピーする')
+  const copyButtonText = computed(() => isCopying.value ? 'Copied!' : 'Copy to Clipboard')
 
   
   const characterCount = computed<number>(() => {
