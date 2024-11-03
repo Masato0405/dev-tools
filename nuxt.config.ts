@@ -5,4 +5,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
+  runtimeConfig: {
+    public: {
+      GA_ID: process.env.GA_ID || ''
+    }
+  }
 })

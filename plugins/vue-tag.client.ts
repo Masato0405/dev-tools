@@ -1,7 +1,8 @@
 import VueGtag, { trackRouter } from "vue-gtag-next";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const GA_ID = process.env.GA_ID;
+const config = useRuntimeConfig()
+const GA_ID = config.public.GA_ID
   if (GA_ID) {
     nuxtApp.vueApp.use(VueGtag, {
         property: {
