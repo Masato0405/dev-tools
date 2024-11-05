@@ -114,6 +114,38 @@
             </p>
           </div>
         </NuxtLink>
+
+        <NuxtLink to="/IPChecker" class="block">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <div class="flex items-center mb-3">
+              <span class="text-blue-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM2 12h20M12 2c1.885 2.917 3.065 6.21 3.065 10s-1.18 7.083-3.065 10M12 2c-1.885 2.917-3.065 6.21-3.065 10s1.18 7.083 3.065 10"
+                  />
+                </svg>
+              </span>
+              <h2 class="text-xl font-semibold text-gray-800 ml-2">
+                IP Checker
+              </h2>
+            </div>
+            <p class="text-gray-600">
+              Check and copy your public IP address easily for network
+              troubleshooting and verification.
+            </p>
+          </div>
+        </NuxtLink>
       </div>
 
       <footer class="mt-8 text-center text-gray-500 text-sm">

@@ -6,6 +6,7 @@
         <li><a href="/WordCounter" class="hover:text-vueDarkGreen">Word Counter</a></li>
         <li><a href="/UrlEncoderDecoder" class="hover:text-vueDarkGreen">URL Encoder/Decoder</a></li>
         <li><a href="/JsonFormatter" class="hover:text-vueDarkGreen">JSON Formatter</a></li>
+        <li><a href="/IPChecker" class="hover:text-vueDarkGreen">IP Checker</a></li>
       </ul>
     </nav>
   </header>
